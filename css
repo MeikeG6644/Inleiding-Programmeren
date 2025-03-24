@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    height: 6em;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 5%;
+}
+
+.healthbar1,
+.healthbar2 {
+    height: 6em;
+    background-color: #444;
+    overflow: hidden;
+}
+
+.healthbar-progress1,
+.healthbar-progress2 {
+    height: 100%;
+    background-color: #0f0;
+    transition: width 0.2s ease-in-out;
+}
+
+.healthbar-progress1.low,
+.healthbar-progress2.low {
+    background-color: #ff0;
+}
+
+.healthbar-progress1.critical,
+.healthbar-progress2.critical {
+    background-color: #f00;
+}
+
+.healthbar-progress1.dead,
+.healthbar-progress2.dead {
+    width: 0;
+    background-color: #000;
+}
+
+/* main */
+.text {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35em;
+    height: 15em;
+}
+
+h1 {
+    position: fixed;
+    top: 50%;
+    transform: translate(40%, 40%);
+    font-size: 3.5em;
+    border-radius: 5px;
+}
+
+.gewonnen {
+    background-color: green;
+}
+
+.verloren {
+    background-color: red;
+}
+
+.characters {
+    display: flex;
+    height: 42em;
+    align-items: center;
+}
+
+.hero {
+    background-image: url(../images/characters/good/korra_fight.png);
+    /*https://static.wikia.nocookie.net/platinumgames/images/b/bb/Avatar_Korra.jpg/revision/latest?cb=20150107020129*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20em;
+    height: 30em;
+    margin-top: 30em;
+    margin-left: 15em;
+    transition: transform 0.2s ease-in-out;
+}
+
+.hero.hero-animation {
+    transform: translateX(2em);
+}
+
+.enemy {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10em;
+    height: 20em;
+    margin-top: 27em;
+    margin-left: 65em;
+    transition: transform 0.2s ease-in-out;
+}
+
+.enemy.enemy-animation {
+    transform: translateX(-2em);
+}
+
+/* footer */
+button {
+    margin: 10px;
+    margin-bottom: 0;
+    width: 15em;
+    height: 5em;
+    border-radius: 5px;
+}
+
+button img {
+    height: 4em;
+}
+
+#water {
+    background-color: #55aaff;
+}
+
+#earth {
+    background-color: #aeb463;
+}
+
+#fire {
+    background-color: #ff6501;
+}
+
+#air {
+    background-color: #d0e6f0;
+}
+
+footer {
+    display: flex;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-left: 5em;
+    margin-left: 50em;
+    margin-bottom: 0;
+}
